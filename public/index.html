@@ -50,14 +50,14 @@
   </div>
 
   <div class="introducao">
-      <p>Para entender como a gestão financeira se traduz em desempenho dentro de campo, o S.F.A. aplicou sua
-        metodologia de análise em três dos maiores protagonistas do futebol brasileiro.</p>
-        <p>Nesta seção, não olhamos apenas para o tamanho do orçamento, mas para a conversão de capital em resultados.
-        Através da lógica do Moneyball, auditamos a relação entre o investimento no elenco e a entrega efetiva em pontos
-        e títulos. O objetivo é responder à pergunta fundamental para qualquer investidor ou gestor: quem está gastando
-        melhor e entregando a maior eficiência por real investido?</p>
-        <p>Abaixo, detalhamos o raio-x de performance de Corinthians, Flamengo e Palmeiras sob a ótica da nossa métrica de
-        produtividade:</p>
+    <p>Para entender como a gestão financeira se traduz em desempenho dentro de campo, o S.F.A. aplicou sua
+      metodologia de análise em três dos maiores protagonistas do futebol brasileiro.</p>
+    <p>Nesta seção, não olhamos apenas para o tamanho do orçamento, mas para a conversão de capital em resultados.
+      Através da lógica do Moneyball, auditamos a relação entre o investimento no elenco e a entrega efetiva em pontos
+      e títulos. O objetivo é responder à pergunta fundamental para qualquer investidor ou gestor: quem está gastando
+      melhor e entregando a maior eficiência por real investido?</p>
+    <p>Abaixo, detalhamos o raio-x de performance de Corinthians, Flamengo e Palmeiras sob a ótica da nossa métrica de
+      produtividade:</p>
   </div>
 
   <div class="container-cards-index">
@@ -66,20 +66,70 @@
       <p>Investimento no Elenco: R$ 345,8 milhões</p>
       <p>Pontuação no campeonato brasileiro: 47 pontos de 114 possiveis</p>
       <p>titulos: Campeonato Paulista, Copa do Brasil</p>
+      <p>Eficiencia: </p>
+      <p>% de investimento sobre a receita: </p>
     </div>
     <div class="card-conteudo">
       <h3>Flamengo</h3>
       <p>Investimento no Elenco: R$ 650 milhões</p>
       <p>Pontuação no campeonato brasileiro: 79 pontos de 114 possiveis</p>
       <p>titulos: Copa Libertadores da América, Campeonato Brasileiro, Supercopa do Brasil e Campeonato Carioca</p>
+      <p>Eficiencia: </p>
+      <p>% de investimento sobre a receita: </p>
     </div>
     <div class="card-conteudo">
       <h3>Palmeiras</h3>
       <p>Investimento no Elenco: R$ 700 milhões</p>
       <p>Pontuação no campeonato brasileiro: 76 pontos de 114 possiveis</p>
       <p>titulos: Nenhum</p>
+      <p>Eficiencia: </p>
+      <p>% de investimento sobre a receita: </p>
     </div>
   </div>
+
+
+  <!-- simulador inicio -->
+  <div class="simulador">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+    <div class="container simulador">
+      <div class="card card-cadastro">
+        <h2>Descubra a Eficiencia da Gestão</h2>
+        <div class="formulario">
+          <div class="campo">
+            <span>Nome do clube</span>
+            <input id="ipt_nome_clube" type="text" placeholder="Insira aqui o nome do clube" />
+          </div>
+          <div class="campo">
+            <span>Receita estimada</span>
+            <input id="ipt_receita" type="text" placeholder="Receita estimada" />
+          </div>
+          <div class="campo">
+            <span>Divida estimada</span>
+            <input id="ipt_divida" type="text" placeholder="Divida estimada" />
+          </div>
+          <div class="campo">
+            <span>Investimento no elenco</span>
+            <input id="ipt_investimento" type="number" placeholder="Investimento no elenco" />
+          </div>
+          <div class="campo">
+            <span>Pontuação final do clube</span>
+            <input id="ipt_pontuacao" type="number" placeholder="Pontuação final" />
+          </div>
+          <button class="botao" onclick="analisar()">Analisar</button>
+        </div>
+        <div id="div_aguardar" class="loading-div">
+          <img src="./assets/circle-loading.gif" id="loading-gif" />
+        </div>
+
+        <div id="div_erros_login"></div>
+      </div>
+    </div>
+  </div>
+  <!-- simulador fim -->
 
   <div class="footer">
     <div class="container">
