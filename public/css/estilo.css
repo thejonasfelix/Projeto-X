@@ -3,12 +3,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: white;
 }
 
 :root {
-  --tamanho-header: 80px;
+  --tamanho-header: 75px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -23,7 +23,7 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 2px solid #002147;
 }
 
 .header .container {
@@ -34,26 +34,39 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color: #002147;
 }
 
 .agora {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .navbar {
-  width: 300px;
+  width: 500px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style: none;
-  color: #e3b062;
+  color: #002147;
+  gap: 25px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
 }
 
 .titulo {
-  color: #32b9cd;
+  color: #002147;
   width: fit-content;
-  font-weight: 500;
+  font-weight: 630;
+  font-weight: bold;
+}
+
+.subtitulo {
+  color: #002147;
+  width: fit-content;
+  font-weight: 170;
 }
 
 .header h1 {
@@ -65,8 +78,10 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  font-weight: bold;
+  background-image: url(../assets/long-shot-friends-playing-soccer.jpg);
   background-size: cover;
+  background-position: center 70%;
 }
 
 .banner .container {
@@ -76,7 +91,7 @@ body {
 }
 
 .banner .container p {
-  width: 50%;
+  width: 55%;
   margin: 0;
   padding: 0;
   font-size: 36px;
@@ -86,42 +101,98 @@ body {
   font-weight: 800;
 }
 
+.conteudo-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+
+
+
+
 /* MISSÃO VISÃO VALORES */
 
-.social {
-  background-color: #e5e5e5;
-  display: flex;
+.banner-sobre-nos {
+  height: var(--tamanho-banner);
+  color: white;
+  font-weight: bold;
+  background-image: url(../assets/young-woman-playing-tennis.jpg);
+  background-size: cover;
+  background-position: center 40%;
 }
 
-.social .container {
+.banner-sobre-nos .container {
   justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 30px 0;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+
+.banner-sobre-nos .container p {
+  width: 55%;
+  margin: 0;
+  padding: 0;
+  font-size: 52px;
+}
+
+.banner-sobre-nos .container span {
+  font-weight: 800;
+}
+
+.container-conteudo-sobre-nos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social {
+  background-color: #ffffff;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+}
+
+.titulo-cards-sobre-nos {
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+
+.valores-sobre-nos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #002147;
   height: 150px;
   color: #fff;
   display: flex;
@@ -138,27 +209,27 @@ body {
 }
 
 /* LOGIN */
-
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background: #002147;
   background-size: cover;
+  height: 100%;
 }
 
 .login .container {
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .card {
   width: 50%;
-  background-color: #e5e5e5;
+  background-color: white;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: #002147;
   flex-direction: column;
   height: fit-content;
   padding: 20px 0;
@@ -183,14 +254,14 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 2px solid #002147;
   text-align: center;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
+  border: 2px solid #002147;
   background-color: white;
   color: gray;
   height: 36px;
@@ -214,7 +285,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #ED145B;
+  background-color: #002147;
   width: 120px;
   height: 30px;
   align-self: center;
@@ -237,7 +308,7 @@ body {
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -254,7 +325,7 @@ body {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -305,12 +376,13 @@ input {
 /* SIMULADOR */
 
 .simulador {
-  color: white;
+  background: linear-gradient(black, #002147);
 }
 
 .simulador .container {
   flex-direction: column;
-  overflow: scroll; 
+  align-items: center;
+  margin-top: 50px;
   height: var(--tamanho-simulador);
 }
 
@@ -353,10 +425,62 @@ input {
   animation-iteration-count: infinite;
 }
 
+
+.introducao{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 3%;
+  width: 1200px;
+}
+.container-cards-index{
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  min-height: 100vh;       
+  margin: 0;
+  background-color: #f0f0f0;
+  gap: 5%;
+}
+.card-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #d3d3d3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+}
+
+.card-conteudo h3, .card-conteudo p {
+  margin: 5px 0;
+}
+
 @keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+  0% {
+    transform: rotate(25deg)
+  }
+
+  25% {
+    transform: rotate(-25deg)
+  }
+
+  50% {
+    transform: rotate(25deg)
+  }
+
+  75% {
+    transform: rotate(-25deg)
+  }
+
+  100% {
+    transform: rotate(25deg)
+  }
 }
