@@ -172,11 +172,13 @@ body {
 /* sobre mj*/
 
 .container-sobre-mj{
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 1200px;
+  margin-left: 15%;
+  width: 70%;
   font-weight: bold;
   font-style: justify;
 }
@@ -282,7 +284,7 @@ body {
   border-radius: 8px;
 }
 
-/* FORMULÁRIO */
+/* FORMULÁRIO DE LOGIN */
 .login .container {width: 50%;
   display: flex;
   justify-content: center; /* 🔥 joga o card pra esquerda */
@@ -307,11 +309,13 @@ body {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.589);
 }
 
+
 .card h2 {
   margin: 0;
   font-size: 38px;
   margin-bottom: 25px;
 }
+
 
 .formulario {
   display: flex;
@@ -369,6 +373,81 @@ body {
 }
 
 
+
+/**CADASTRO*/
+.card-cadastro {
+  width: 40%;
+  max-width: 500px;
+  background-color: #0D0D0D;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  padding: 40px;
+  margin-left: 10%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.589);
+}
+.card-cadastro h2 {
+  margin: 0;
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+.formulario-cadastro {
+  display: flex;
+  height: 90%;
+  width: 100%;
+  gap: 15px;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.formulario-cadastro span {
+  font-size: 15px;
+  font-weight: 800;
+}
+.formulario-cadastro select {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  height: 36px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.formulario-cadastro input {
+  border: 2px solid white;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0;
+  height: 45px;
+  padding: 0 15px;
+  border: none;
+}
+.campo-cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 5px 0;
+}
+
+.botao-cadastro {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background-color: #e10600;
+  width: 120px;
+  height: 30px;
+  align-self: center;
+  margin-top: 20px;
+}
+
 /*IMAGEM CADASTRO*/
 
 .img-cadastro{
@@ -377,7 +456,15 @@ body {
   justify-content: flex-end;
   width: 60%;
   height: 80%;
-  margin-right: 1%;
+  margin-right: 1%; 
+  margin-left: 10%;
+}
+
+
+.img-cadastro img{
+  width: 80%;
+  height: 110%;
+  border-radius: 10px;
 }
 
 .loading-div {
