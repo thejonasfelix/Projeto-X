@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/logo-mj.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.O.A.T.</title>
+    <link rel="stylesheet" href="./../css/dashboards.css">
+    <link rel="stylesheet" href="./../css/estilo.css" />
+    <script src="../js/sessao.js"></script>
+    <script src="./../js/alerta.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- <body onload=" atualizarFeed()"> -->
+
+<body>
+
+
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="titulo">The G.O.A.T.</h1>
+                <span class="subtitulo">Michael Jordan 23</span>
+            </div>
+            <ul class="navbar">
+                <li>
+                    <a href="dashboard.html">Inicial</a>
+                </li>
+                <li>
+                    <a href="estatisticas.html">Estatísticas</a>
+                </li>
+                <li>
+                    <a href="sala-trofeus.html">Sala de Troféus</a>
+                </li>
+                <li>
+                    <a href="jogar.html">Jogar</a>
+                </li>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero-jogar">
+        <div class="hero-content">
+            <h1 class="hero-title-jogar">Jogar</h1>
+        </div>
+    </section>
+
+     <section class="era-simulator">
+        <h2 class="section-title">Máquina do Tempo: Jordan em Outras Eras</h2>
+        <div class="container">
+            <div class="era-container">
+
+                <div class="era-inputs">
+                    <div class="input-field">
+                        <label>Escolha a Temporada do MJ:</label>
+                        <select id="season-select">
+                            <option value="87">1986-87 (O auge pontuador - 37.1 PPG)</option>
+                            <option value="91">1990-91 (O primeiro título - 31.5 PPG)</option>
+                            <option value="96">1995-96 (O retorno 72-10 - 30.4 PPG)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Para qual era ele vai?</label>
+                        <select id="era-target">
+                            <option value="60">Anos 60 (Ritmo frenético / Wilt Chamberlain)</option>
+                            <option value="00">Anos 2000 (Defesa física / Jogo lento)</option>
+                            <option value="24">NBA Atual (Era do 3pt / Espaçamento total)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Intensidade do MJ (Usage %):</label>
+                        <input type="range" id="usage" min="1" max="100" value="33">
+                        <span id="usage-val">Normal (33%)</span>
+                    </div>
+
+                    <button class="btn-simular" onclick="simularEra()">Viajar no Tempo</button>
+                </div>
+
+                <div class="era-results">
+                    <div class="stat-card-era">
+                        <span class="stat-label">PPG ESTIMADO</span>
+                        <h4 id="res-ppg">--</h4>
+                    </div>
+                    <div class="stat-card-era">
+                        <span class="stat-label">3PT POR JOGO</span>
+                        <h4 id="res-3pt">--</h4>
+                    </div>
+                    <p id="era-analysis">Selecione os dados e clique no botão para ver a projeção estatística.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Michael Jordan Legacy Project</p>
+    </footer>
+    

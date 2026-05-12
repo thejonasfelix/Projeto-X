@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/logo-mj.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.O.A.T.</title>
+    <link rel="stylesheet" href="./../css/dashboards.css">
+    <link rel="stylesheet" href="./../css/estilo.css" />
+    <script src="../js/sessao.js"></script>
+    <script src="./../js/alerta.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- <body onload=" atualizarFeed()"> -->
+
+<body>
+
+
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="titulo">The G.O.A.T.</h1>
+                <span class="subtitulo">Michael Jordan 23</span>
+            </div>
+            <ul class="navbar">
+                <li>
+                    <a href="dashboard.html">Inicial</a>
+                </li>
+                <li>
+                    <a href="estatisticas.html">Estatísticas</a>
+                </li>
+                <li>
+                    <a href="sala-trofeus.html">Sala de Troféus</a>
+                </li>
+                <li>
+                    <a href="jogar.html">Jogar</a>
+                </li>
+
+                <div class="btn-logout" onclick="limparSessao()">
+                    <h3>Sair</h3>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero-stats">
+        <div class="hero-content">
+            <h1 class="hero-title-stats">Stats</h1>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <h2 class="section-title">Estatísticas por Temporada</h2>
+        <div class="container">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Temporada</th>
+                            <th>Esporte</th>
+                            <th>Equipe</th>
+                            <th>Pontos/AVG</th>
+                            <th>Rebotes/Hits</th>
+                            <th>Assist/HR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="college">
+                            <td>1981-84</td>
+                            <td>Basquete (NCAA)</td>
+                            <td>UNC Tar Heels</td>
+                            <td>17.7 PPG</td>
+                            <td>5.0 RPG</td>
+                            <td>1.8 APG</td>
+                        </tr>
+                        <tr class="pro">
+                            <td>1986-87</td>
+                            <td>Basquete (NBA)</td>
+                            <td>Chicago Bulls</td>
+                            <td>37.1 PPG</td>
+                            <td>5.2 RPG</td>
+                            <td>4.6 APG</td>
+                        </tr>
+                        <tr class="baseball">
+                            <td>1994</td>
+                            <td>Baseball (MiLB)</td>
+                            <td>Birmingham Barons</td>
+                            <td>.202 AVG</td>
+                            <td>88 Hits</td>
+                            <td>3 HR</td>
+                        </tr>
+                        <tr class="pro">
+                            <td>1995-96</td>
+                            <td>Basquete (NBA)</td>
+                            <td>Chicago Bulls</td>
+                            <td>30.4 PPG</td>
+                            <td>6.6 RPG</td>
+                            <td>4.3 APG</td>
+                        </tr>
+                        <tr class="last-year">
+                            <td>2002-03</td>
+                            <td>Basquete (NBA)</td>
+                            <td>Washington Wizards</td>
+                            <td>20.0 PPG</td>
+                            <td>6.1 RPG</td>
+                            <td>3.8 APG</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Michael Jordan Legacy Project</p>
+    </footer>

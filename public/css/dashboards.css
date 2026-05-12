@@ -2,117 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.label-captura {
-  display: flex;
-  justify-content: center;
-}
-
-.dash-right .avisos {
-  width: 100%;
-  color: rgb(216, 216, 216);
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.dash-right .avisos .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dash-right .avisos .container .div-form {
-  width: 95%;
-}
-
-.dash-right .avisos .container .div-form #form_postagem {
-  width: 95%;
-}
-
-.dash-right .avisos .div-form label {
-  width: 95%;
-}
-
-.dash-right .avisos .div-form input {
-  width: 95%;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form textarea {
-  width: 95%;
-  border: 3px solid #e6005a;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form button {
-  cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
-}
-
-.publicacao-btn-editar {
-  cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
-  width: 80px;
-}
-
-.publicacao {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  border-bottom: 3px solid #e6005a;
-  padding: 20px;
-}
-
-.publicacao>*:not(:last-child) {
-  padding: 0 0 10px 0;
-}
-
-.div-results {
-  width: 100%;
-}
-
-.div-results .feed-container {
-  background-color: #212124;
-  border-radius: 5px;
-  margin-bottom: 80px;
-}
-
-.div-buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.div-buttons>* {
-  margin-left: 30px;
-}
-
-/* pagina graficos */
-
 .dash-header {
-  background-color: #212124;
+  background-color: #010101;
 }
 
 .dash {
@@ -120,7 +11,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: #010101;
   height: 100vh;
   overflow: auto;
 }
@@ -132,7 +23,7 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 10px;
-  background-color: #212124;
+  background-color: #010101;
 }
 
 .area-parametros-alerta .titulo-legenda {
@@ -417,12 +308,529 @@ canvas {
 .btn-logout {
   margin: 0;
   padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
+  background-color: #e10600;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
-  padding: 10px 15px;
-  margin-bottom: 100px;
+  padding: 8px 12px;
   cursor: pointer;
+}
+
+*/
+
+/* dash */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1400px;
+  /* Aumentamos de 1200px para 1400px */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  border-bottom: 4px solid #ba0c2f;
+  padding: 60px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+header p {
+  color: #ba0c2f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Títulos das Seções */
+.section-title {
+  margin: 50px 0 30px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-left: 6px solid #ba0c2f;
+  padding-left: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GRID DE TROFÉUS - 4 CARDS POR LINHA */
+.trophy-section {
+  width: 100%;
+  display: block;
+  /* Garante que a seção ocupe a linha toda */
+  padding-bottom: 40px;
+}
+
+/* GRID DE TROFÉUS - AGORA 1 CARD POR LINHA */
+.trophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-items: center;
+  /* ISSO centraliza o card horizontalmente */
+  width: 100%;
+}
+
+.card {
+  background-color: #1e1e1e;
+  padding: 60px 40px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #333;
+  transition: 0.3s;
+
+  /* AUMENTANDO A LARGURA: */
+  width: 95%;
+  /* Ocupa quase toda a largura disponível */
+  max-width: 1200px;
+  /* Mas não passa de 1200px para não esticar infinito */
+
+  /* Garantindo que o conteúdo interno também fique bonito */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  border-color: #ba0c2f;
+  transform: scale(1.02);
+  /* Leve aumento ao passar o mouse */
+  background-color: #252525;
+}
+
+/* Ajuste nos textos para acompanhar o tamanho novo */
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.card .year {
+  font-size: 1.2rem;
+  color: #ba0c2f;
+  margin-bottom: 10px;
+}
+
+.card .desc {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+/* SEÇÃO DE ESTATÍSTICAS - ABAIXO */
+.stats-section {
+  width: 100%;
+  display: block;
+  /* Força o empilhamento abaixo da seção anterior */
+  padding: 40px 0;
+  background-color: #181818;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: #ba0c2f;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Cores das Bordas Laterais por Era */
+.college {
+  border-left: 5px solid #7BAFD4;
+}
+
+.pro {
+  border-left: 5px solid #ba0c2f;
+}
+
+.baseball {
+  border-left: 5px solid #fff;
+}
+
+.last-year {
+  border-left: 5px solid #002B5C;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px;
+  color: #555;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 1024px) {
+  .trophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .trophy-grid {
+    grid-template-columns: 1fr;
+    /* 1 coluna em celulares */
+  }
+}
+
+/* simulador mj */
+
+/* Container Principal do Simulador */
+.era-simulator {
+  padding: 80px 0;
+  background-color: #0a0a0a;
+}
+
+.era-container {
+  display: flex;
+  gap: 30px;
+  background-color: #161616;
+  padding: 50px;
+  border-radius: 15px;
+  border-top: 4px solid #ba0c2f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Painel de Configurações */
+.era-inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field label {
+  font-weight: bold;
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.input-field select,
+.input-field input[type="number"] {
+  padding: 15px;
+  background-color: #222;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-field select:focus {
+  border-color: #ba0c2f;
+}
+
+/* Slider de Usage */
+input[type="range"] {
+  accent-color: #ba0c2f;
+  cursor: pointer;
+}
+
+#usage-val {
+  font-size: 0.8rem;
+  color: #ba0c2f;
+  font-weight: bold;
+}
+
+/* Botão */
+.btn-simular {
+  background-color: #ba0c2f;
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.btn-simular:hover {
+  background-color: #fff;
+  color: #ba0c2f;
+}
+
+/* Painel de Resultados */
+.era-results {
+  flex: 1;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #222;
+}
+
+.stat-card-era {
+  margin-bottom: 30px;
+}
+
+.stat-label {
+  display: block;
+  color: #666;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.stat-card-era h4 {
+  font-size: 4rem;
+  color: #ba0c2f;
+  line-height: 1;
+}
+
+#era-analysis {
+  color: #aaa;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .era-container {
+    flex-direction: column;
+  }
+}
+
+/* Ajuste para o container do vídeo aceitar o iframe corretamente */
+.video-box {
+  flex: 6;
+  background-color: #000;
+  position: relative;
+  /* Mantém a proporção de vídeo 16:9 */
+  aspect-ratio: 16 / 9;
+}
+
+/* Faz o iframe do YouTube ocupar 100% da largura e altura da div pai */
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Mantém o texto alinhado ao lado */
+.video-info {
+  flex: 4;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  height: 100vh;
+  /* No CSS usamos url() e separamos o gradiente da imagem com uma vírgula */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/jordanfundo-dash.jpg') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 6rem;
+  letter-spacing: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 15px 40px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.subtitulo-trajetoria {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+
+}
+
+.trajetoria-conteudo {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.container-trajetoria {
+  height: fit-content;
+    width: 90%;            /* Ocupa 90% em telas pequenas */
+    max-width: 800px;      /* Limita a largura em 800px para o texto não espalhar demais */
+    margin: 0 auto;        /* Centraliza o container horizontalmente na tela */
+    display: flex;
+    flex-direction: column; /* Garante que os parágrafos fiquem um embaixo do outro */
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.hero-stats {
+  height: 100vh;
+  /* No CSS usamos url() e separamos o gradiente da imagem com uma vírgula */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/jordan-tela-stats.jpg') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title-stats {
+  font-size: 6rem;
+  letter-spacing: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle-stats {
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.hero-tfs {
+  height: 100vh;
+  /* No CSS usamos url() e separamos o gradiente da imagem com uma vírgula */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/jordantfs.jpg') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title-tfs {
+  font-size: 6rem;
+  letter-spacing: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle-tfs {
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.hero-jogar {
+  height: 100vh;
+  /* No CSS usamos url() e separamos o gradiente da imagem com uma vírgula */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/jordan-tela-stats.jpg') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title-stats {
+  font-size: 6rem;
+  letter-spacing: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle-stats {
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+  
+.hero-jogar {
+  height: 100vh;
+  /* No CSS usamos url() e separamos o gradiente da imagem com uma vírgula */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/jordan-tela-jogar.jpg') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title-jogar {
+  font-size: 6rem;
+  letter-spacing: 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle-jogar {
+  font-size: 1.5rem;
+  color: #ba0c2f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
