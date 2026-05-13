@@ -220,7 +220,7 @@ body {
 
 .lista-trofeus {
   display: flex;
-  flex-direction: row; /* 🔴 aqui garante um abaixo do outro */
+  flex-direction: row; 
   align-items: center;
   gap: 100px;
 }
@@ -273,7 +273,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 70%; /* 🔥 aumenta a largura da imagem */
+  width: 70%; 
   height: 100%;
 }
 
@@ -292,7 +292,7 @@ body {
 /* FORMULÁRIO DE LOGIN */
 .login .container {width: 50%;
   display: flex;
-  justify-content: center; /* 🔥 joga o card pra esquerda */
+  justify-content: center; 
   align-items: center;
   padding-left: 40px;
   
@@ -702,9 +702,6 @@ input {
   }
 }
 
-/* videosssss */
-
-/* SEÇÃO DE VÍDEOS */
 .video-section {
     padding: 60px 0;
     background-color: #121212;
@@ -712,7 +709,7 @@ input {
 
 .video-card {
     display: flex;
-    align-items: center; /* Centraliza verticalmente o texto com o vídeo */
+    align-items: center; 
     background-color: #1e1e1e;
     border-radius: 15px;
     overflow: hidden;
@@ -725,19 +722,17 @@ input {
     border-color: #ba0c2f;
 }
 
-/* Lado do Vídeo (ocupa 60% da largura) */
 .video-box {
     flex: 6;
     background-color: #000;
-    line-height: 0; /* Remove espaços vazios abaixo do vídeo */
-}
+    line-height: 0;
+  }
 
 .video-box video {
     width: 100%;
     display: block;
 }
 
-/* Lado do Texto (ocupa 40% da largura) */
 .video-info {
     flex: 4;
     padding: 40px;
@@ -756,14 +751,3 @@ input {
     line-height: 1.6;
 }
 
-/* Responsividade: No celular o texto vai para baixo do vídeo */
-@media (max-width: 900px) {
-    .video-card {
-        flex-direction: column;
-    }
-    
-    .video-info {
-        padding: 20px;
-        text-align: center;
-    }
-}

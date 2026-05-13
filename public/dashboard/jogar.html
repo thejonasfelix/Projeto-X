@@ -56,13 +56,13 @@
         </div>
     </div>
 
-    <section class="hero-jogar">
+    <div class="hero-jogar">
         <div class="hero-content">
             <h1 class="hero-title-jogar">Jogar</h1>
         </div>
-    </section>
+    </div>
 
-     <section class="era-simulator">
+     <div class="era-simulator">
         <h2 class="section-title">Máquina do Tempo: Jordan em Outras Eras</h2>
         <div class="container">
             <div class="era-container">
@@ -71,45 +71,30 @@
                     <div class="input-field">
                         <label>Escolha a Temporada do MJ:</label>
                         <select id="season-select">
-                            <option value="87">1986-87 (O auge pontuador - 37.1 PPG)</option>
-                            <option value="91">1990-91 (O primeiro título - 31.5 PPG)</option>
-                            <option value="96">1995-96 (O retorno 72-10 - 30.4 PPG)</option>
+                            <option value="87">1985 (Rookie)</option>
+                            <option value="91">1990-91 (O primeiro título)</option>
+                            <option value="96">1995-96 (O retorno)</option>
                         </select>
                     </div>
 
                     <div class="input-field">
                         <label>Para qual era ele vai?</label>
                         <select id="era-target">
-                            <option value="60">Anos 60 (Ritmo frenético / Wilt Chamberlain)</option>
-                            <option value="00">Anos 2000 (Defesa física / Jogo lento)</option>
-                            <option value="24">NBA Atual (Era do 3pt / Espaçamento total)</option>
+                            <option value="60">Anos 60 (Wilt Chamberlain)</option>
+                            <option value="00">Anos 2000 (Tim Duncan)</option>
+                            <option value="24">NBA Atual (Era do 3pt)</option>
                         </select>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Intensidade do MJ (Usage %):</label>
-                        <input type="range" id="usage" min="1" max="100" value="33">
-                        <span id="usage-val">Normal (33%)</span>
                     </div>
 
                     <button class="btn-simular" onclick="simularEra()">Viajar no Tempo</button>
                 </div>
 
                 <div class="era-results">
-                    <div class="stat-card-era">
-                        <span class="stat-label">PPG ESTIMADO</span>
-                        <h4 id="res-ppg">--</h4>
-                    </div>
-                    <div class="stat-card-era">
-                        <span class="stat-label">3PT POR JOGO</span>
-                        <h4 id="res-3pt">--</h4>
-                    </div>
-                    <p id="era-analysis">Selecione os dados e clique no botão para ver a projeção estatística.</p>
                 </div>
 
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; 2026 Michael Jordan Legacy Project</p>
