@@ -786,7 +786,6 @@ input[type="range"] {
     align-items: center;
     gap: 20px;
     margin-bottom: 30px; /* Espaço entre cada conquista */
-    border-bottom: 1px solid #eee; /* Linha sutil separadora */
     padding-bottom: 20px;
 }
 
@@ -799,12 +798,12 @@ input[type="range"] {
 
 .conteudo-texto h3 {
     margin: 0 0 5px 0;
-    color: #ce1141; /* Vermelho Bulls */
+    color: white; /* Vermelho Bulls */
 }
 
 .year {
     font-weight: bold;
-    color: #555;
+    color: white;
 }
 
 .stats-controls {

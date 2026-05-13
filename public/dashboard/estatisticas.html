@@ -108,22 +108,17 @@
         function mudarTemporada() {
             var anoSelecionado = document.getElementById('season-select').value;
 
-            // Faz a chamada para o seu servidor Node.js
             fetch(`/medidas/jordan/${anoSelecionado}`, { cache: 'no-store' }).then(function (response) {
                 if (response.ok) {
                     response.json().then(function (resposta) {
                         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-                        // resposta[0] contém os dados do Jordan e do Rival que vieram do SQL
                         var dados = resposta[0];
 
-                        // Atualiza os Cards com os dados do Jordan
                         document.getElementById('ppg-value').innerText = dados.pontos_mj;
                         document.getElementById('apg-value').innerText = dados.assistencias_mj;
                         document.getElementById('rpg-value').innerText = dados.rebotes_mj;
                         document.getElementById('fg-value').innerText = dados.aproveitamento_mj + "%";
 
-                        // Chama a função para redesenhar o gráfico com os dados do Jordan vs Rival
                         plotarGrafico(dados);
                     });
                 } else {
@@ -140,14 +135,10 @@
             console.log("Iniciando a plotagem do gráfico com os dados:", dados);
 
             const ctx = document.getElementById('myChart').getContext('2d');
-
-            // IMPORTANTE: Se já existir um gráfico, precisamos destruí-lo antes de criar outro
-            // Isso evita que os dados fiquem sobrepostos ou "piscando"
             if (graficoAtual) {
                 graficoAtual.destroy();
             }
 
-            // Criando o novo gráfico de barras
             graficoAtual = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -156,13 +147,13 @@
                         {
                             label: 'Michael Jordan',
                             data: [dados.pontos_mj, dados.assistencias_mj, dados.rebotes_mj, dados.aproveitamento_mj],
-                            backgroundColor: '#CE1141', // Vermelho Bulls
+                            backgroundColor: '#CE1141', 
                             borderWidth: 1
                         },
                         {
-                            label: dados.rival_nome || 'Rival', // Pega o nome do rival do banco ou usa "Rival" como padrão
+                            label: dados.rival_nome || 'Rival',
                             data: [dados.pontos_rival, dados.assistencias_rival, dados.rebotes_rival, dados.aproveitamento_rival],
-                            backgroundColor: '#000000', // Preto
+                            backgroundColor: '#000000', 
                             borderWidth: 1
                         }
                     ]
