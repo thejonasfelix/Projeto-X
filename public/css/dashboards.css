@@ -853,3 +853,28 @@ input[type="range"] {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.05);
 }
+
+
+.container-simulador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.container-simulador h3{
+  font-size: 32px;
+}
+.card-simulador{
+  background-color: #000;
+  color: #DAA520;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  border-radius: 8px;
+  border: 2px;
+  width: fit-content;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}

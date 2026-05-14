@@ -79,23 +79,41 @@
 
     <div class="dashboard-grid">
         <div class="stat-card">
-            <h4>Pontos por Jogo</h4>
+            <h4>Pontos por Jogo - MJ</h4>
             <p id="ppg-value">0</p>
         </div>
         <div class="stat-card">
-            <h4>Assistências</h4>
+            <h4>Assistências - MJ</h4>
             <p id="apg-value">0</p>
         </div>
         <div class="stat-card">
-            <h4>Rebotes</h4>
+            <h4>Rebotes - MJ</h4>
             <p id="rpg-value">0</p>
         </div>
         <div class="stat-card">
-            <h4>Aproveitamento</h4>
+            <h4>Aproveitamento - MJ</h4>
             <p id="fg-value">0%</p>
         </div>
     </div>
+    <div class="dashboard-grid">
+        <div class="stat-card">
+            <h4>Pontos por Jogo - Rival</h4>
+            <p id="ppg-value-rv">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Assistências - Rival</h4>
+            <p id="apg-value-rv">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Rebotes - Rival</h4>
+            <p id="rpg-value-rv">0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Aproveitamento - Rival</h4>
+            <p id="fg-value-rv">0%</p>
+        </div>
 
+    </div>
     <div class="chart-container">
         <canvas id="myChart"></canvas>
     </div>
@@ -118,6 +136,10 @@
                         document.getElementById('apg-value').innerText = dados.assistencias_mj;
                         document.getElementById('rpg-value').innerText = dados.rebotes_mj;
                         document.getElementById('fg-value').innerText = dados.aproveitamento_mj + "%";
+                        document.getElementById('ppg-value-rv').innerText = dados.pontos_rival;
+                        document.getElementById('apg-value-rv').innerText = dados.assistencias_rival;
+                        document.getElementById('rpg-value-rv').innerText = dados.rebotes_rival;
+                        document.getElementById('fg-value-rv').innerText = dados.aproveitamento_rival + "%";
 
                         plotarGrafico(dados);
                     });
@@ -147,13 +169,13 @@
                         {
                             label: 'Michael Jordan',
                             data: [dados.pontos_mj, dados.assistencias_mj, dados.rebotes_mj, dados.aproveitamento_mj],
-                            backgroundColor: '#CE1141', 
+                            backgroundColor: '#CE1141',
                             borderWidth: 1
                         },
                         {
                             label: dados.rival_nome || 'Rival',
                             data: [dados.pontos_rival, dados.assistencias_rival, dados.rebotes_rival, dados.aproveitamento_rival],
-                            backgroundColor: '#000000', 
+                            backgroundColor: '#000000',
                             borderWidth: 1
                         }
                     ]

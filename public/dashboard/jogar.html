@@ -62,41 +62,127 @@
         </div>
     </div>
 
-     <div class="era-simulator">
-        <h2 class="section-title">Máquina do Tempo: Jordan em Outras Eras</h2>
-        <div class="container">
-            <div class="era-container">
-
-                <div class="era-inputs">
-                    <div class="input-field">
-                        <label>Escolha a Temporada do MJ:</label>
-                        <select id="season-select">
-                            <option value="87">1985 (Rookie)</option>
-                            <option value="91">1990-91 (O primeiro título)</option>
-                            <option value="96">1995-96 (O retorno)</option>
-                        </select>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Para qual era ele vai?</label>
-                        <select id="era-target">
-                            <option value="60">Anos 60 (Wilt Chamberlain)</option>
-                            <option value="00">Anos 2000 (Tim Duncan)</option>
-                            <option value="24">NBA Atual (Era do 3pt)</option>
-                        </select>
-                    </div>
-
-                    <button class="btn-simular" onclick="simularEra()">Viajar no Tempo</button>
-                </div>
-
-                <div class="era-results">
-                </div>
-
+    <div class="">
+        <div class="container-simulador">
+            <h3>Simule o Desempenho do Jordan em outras Eras</h3>
+            <div class="card-simulador">
+                <p>Selecione o Jordan</p>
+                <select name="" id="jordan">
+                    <option value="1984-85">1984-85</option>
+                    <option value="1986-87">1986-87</option>
+                    <option value="1997-98">1997-98</option>
+                </select><br>
+                <p>Selecione a Era</p>
+                <select name="" id="era">
+                    <option value="anos00s">anos 00s</option>
+                    <option value="atual">atual(2010-2026)</option>
+                    <option value="anos70s">anos 70s</option>
+                </select><br>
+                <button onclick="simular()">Simular</button>
             </div>
         </div>
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <h4>Pontos por Jogo - MJ</h4>
+                <p id="ppg-value">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Assistências - MJ</h4>
+                <p id="apg-value">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Rebotes - MJ</h4>
+                <p id="rpg-value">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Aproveitamento - MJ</h4>
+                <p id="fg-value">0%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
     </div>
 
     <footer>
         <p>&copy; 2026 Michael Jordan Legacy Project</p>
     </footer>
-    
+
+    <script>
+        function simular() {
+            var anoSelecionado = document.getElementById('jordan').value;
+            var eraSelecionado = document.getElementById('era').value;
+
+            fetch(`/medidas/jordan/${anoSelecionado}`, { cache: 'no-store' }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (respostaJordan) {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        var dadosMJ = respostaJordan[0];
+
+
+                        fetch(`/medidas/jordan/${eraSelecionado}`, { cache: 'no-store' }).then(function (responseEra) {
+                            if (responseEra.ok) {
+                                responseEra.json().then(function (respostaEra) {
+
+                                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                                    var dadosEra = respostaEra[0];
+
+
+
+                                    document.getElementById('ppg-value').innerText = dados.pontos_mj;
+                                    document.getElementById('apg-value').innerText = dados.assistencias_mj;
+                                    document.getElementById('rpg-value').innerText = dados.rebotes_mj;
+                                    document.getElementById('fg-value').innerText = dados.aproveitamento_mj + "%";
+                                    dados.pontos_mj_sml =
+                                        dados.assistencias_mj_sml =
+                                        dados.rebotes_mj_sml =
+                                        dados.aproveitamento_mj_sml =
+
+
+                                        plotarGrafico(dados);
+                                });
+                            } else {
+                                console.error('Nenhum dado encontrado ou erro na API');
+                            }
+                        })
+                            .catch(function (error) {
+                                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                            });
+                    }
+        let graficoAtual;
+
+                    function plotarGrafico(dados) {
+                        console.log("Iniciando a plotagem do gráfico com os dados:", dados);
+
+                        const ctx = document.getElementById('myChart').getContext('2d');
+                        if (graficoAtual) {
+                            graficoAtual.destroy();
+                        }
+
+                        graficoAtual = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['Pontos', 'Assistências', 'Rebotes', 'Aproveitamento %'],
+                                datasets: [
+                                    {
+                                        label: 'Michael Jordan',
+                                        data: [dados.pontos_mj_sml, dados.assistencias_mj_sml, dados.rebotes_mj_sml, dados.aproveitamento_mj_sml],
+                                        backgroundColor: '#CE1141',
+                                        borderWidth: 1
+                                    },
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+    </script>
